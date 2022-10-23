@@ -23,6 +23,12 @@ class EmployeeController extends Controller
   
     public function store(Request $request)
     {
+        $request->validate([
+            'emp_name' => 'required|max:20',
+            'contact' => 'numeric|required',
+            'address' => 'required|max:20',
+            'age' => 'required|numeric|max:150'
+        ]);
         $input = $request->all();
         Employee::create($input);
         return redirect('employees')->with('flash_message', 'Employee Added!');  

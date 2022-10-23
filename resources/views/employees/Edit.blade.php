@@ -1,10 +1,9 @@
 
 @extends('employees.layout')
 @section('content')
-<div class="card">
-  <div class="card-header">Edit Page</div>
+<div class="card text-white bg-dark border-success mb-3">
+  <div class="card-header"><center><h1>Edit Employee</h1></center></div>
   <div class="card-body">
-      
       <form action="{{ url('employees/' .$employees->id) }}" method="post">
         {!! csrf_field() !!}
         @method("PATCH")
@@ -16,10 +15,14 @@
         <label>Contact</label></br>
         <input type="text" name="mobile" id="mobile" value="{{$employees->contact}}" class="form-control"></br>
         <label>Gender</label></br>
-        <input type="text" name="gender" id="gender" value="{{$employees->gender}}" class="form-control"></br>
+          <select class="form-select" aria-label="Default select example" name="gender" id="gender">
+            <option disabled selected>{{$employees->gender}}</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select></br>
         <label>Age</label></br>
         <input type="text" name="age" id="age" value="{{$employees->age}}" class="form-control"></br>
-        <input type="submit" value="Update" class="btn btn-success"></br>
+        <button type="submit" class="btn btn-success"><i class="fa fa-pencil-square-o"></i> Update</button></br>
     </form>
   
   </div>
