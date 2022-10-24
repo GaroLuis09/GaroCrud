@@ -5,8 +5,10 @@
             <div class="card text-white bg-dark border-success mb-3">
                 <div class="card-header"><center><h1>Employee List</h1></center></div>
                 <div class="card-body">
-                    <a href="{{ url('/employees/create') }}" class="btn btn-success btn-sm" title="Add New Contact">
-                        <i class="fa fa-plus" aria-hidden="true"></i> Add New
+                    <div class="float-right">
+                        <a href="{{ url('/employees/create') }}" class="btn btn-success" title="Add New Contact">
+                            <i class="fa fa-plus " aria-hidden="true"></i> Add New</a>
+                    </div>
                     </a>
                     <br/>
                     <br/>
