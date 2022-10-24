@@ -34,12 +34,12 @@ class EmployeeController extends Controller
         return redirect('employees')->with('flash_message', 'Employee Added!');  
     }
  
-    
     public function show($id)
     {
         $employees = Employee::find($id);
         return view('employees.show')->with('employees', $employees);
     }
+ 
  
     
     public function edit($id)
