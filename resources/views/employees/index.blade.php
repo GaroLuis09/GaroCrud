@@ -33,7 +33,7 @@
                                     <td>{{ $item->gender }}</td>
                                     <td>{{ $item->age }}</td>
                                     <td>
-                                        <a href="{{ url('/employees/' . $item->id) }}" title="View Student"><button class="btn btn-info"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
+                                        <a href="{{ url('/employees/' . $item->id) }}" title="View Employee"><button class="btn btn-info"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
                                         <a href="{{ url('/employees/' . $item->id . '/edit') }}" title="Edit Employee"><button class="btn btn-primary "><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
                                         <form method="POST" action="{{ url('/employees' . '/' . $item->id) }}" accept-charset="UTF-8" style="display:inline">
                                             {{ method_field('DELETE') }}
